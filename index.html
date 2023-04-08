@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenAI Image Generator</title>
+</head>
+<body>
+    <h1>OpenAI Image Generator</h1>
+    <form method="POST">
+        <label for="prompt">Enter a prompt:</label>
+        <input type="text" id="prompt" name="prompt"><br><br>
+        <input type="submit" value="Generate" name="submit">
+    </form>
+    <br><br>
+    {% if image_data %}
+        <img src="data:image/jpeg;base64,{{ image_data }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
